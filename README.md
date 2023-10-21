@@ -4,9 +4,15 @@ To set project in local environment-</br>
 <ol>
   <li>
     npm init
-    npm install mongodb
+  </li>
+  <li>
+     npm install mongodb
+  </li>
+  <li>
     npm install express
-    npm install cores
+  </li>
+  <li>
+        npm install cores
   </li>
 </ol>
 
