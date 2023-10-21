@@ -1,4 +1,4 @@
-Water Quality Monitaring
+<h1>Water Quality Monitaring</h1>
 
 To set project in local environment-</br>
 <ol>
