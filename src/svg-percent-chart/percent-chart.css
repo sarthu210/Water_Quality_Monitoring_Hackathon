@@ -1,0 +1,113 @@
+.pchart.pc-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.pchart.pc-container svg.pc-chart {
+  display: block;
+  height: 100%;
+}
+
+.pchart.pc-container svg.pc-chart path.pc-bg {
+  fill: none;
+  stroke: #d8d6d6;
+  stroke-width: 4;
+  stroke-dasharray: 100,100;
+}
+
+.pchart.pc-container svg.pc-chart path.pc-fill {
+  fill: none;
+  stroke-width: 4;
+  stroke: black;
+  stroke-dasharray: 0,100;
+  -webkit-transition: stroke-dasharray 1s linear;
+  transition: stroke-dasharray 1s linear;
+}
+
+.pchart.pc-container div.pc-text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pchart.pc-container div.pc-text:hover .pc-num #pc-percent {
+  opacity: 0%;
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important;
+}
+
+.pchart.pc-container div.pc-text:hover .pc-num #pc-actual {
+  opacity: 100%;
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important;
+}
+
+.pchart.pc-container div.pc-text .pc-num {
+  min-height: 1px;
+  margin-top: 8%;
+  height: 25% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.pchart.pc-container div.pc-text .pc-num #pc-percent {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.075rem !important;
+  position: absolute;
+  left: 50%;
+  opacity: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.pchart.pc-container div.pc-text .pc-num #pc-actual {
+  font-size: 1.3rem;
+  font-weight: bold;
+  left: 50%;
+  opacity: 0%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  letter-spacing: 0.075rem !important;
+  position: absolute;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.pchart.pc-container div.pc-text #pc-unit {
+  letter-spacing: 0.075rem !important;
+  font-size: .6rem;
+}
+/*# sourceMappingURL=percent-chart.css.map */

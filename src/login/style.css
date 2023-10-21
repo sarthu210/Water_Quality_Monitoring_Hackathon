@@ -1,0 +1,180 @@
+body{
+    font-family:sans-serif;
+    background-color: rgba(10, 38, 64, 1);
+    margin: 0px;
+}
+.sig{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    margin: 100px;
+    background-color: rgba(28, 61, 91, 1);
+    justify-content: center;
+    border: solid rgba(101, 228, 163, 1) 0.5px;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+
+.form{
+    display: flex;
+    width: auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+   
+    
+}
+
+.roket img{
+    height: 570px;
+    width: 500px;
+    border-radius: 0px;
+}
+
+.user-photo img{
+    height: 20px;
+    width: 20px;
+}
+
+#signup-form{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+   
+}
+
+#login-form{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+}
+
+h2{
+    text-align: center;
+    color: aliceblue;
+    font-size: 30px;
+}
+
+
+input{
+    text-indent: 10px;
+    border: 0cap;
+    height: 35px;
+    border-radius: 25px;
+}
+
+button{
+    height: 35px;
+    background-color: rgba(101, 228, 163, 1);
+    border-radius: 25px;
+    color: rgba(10, 38, 64, 1);
+    border: 0cap;
+    cursor: pointer;
+}
+
+button:hover{
+    border: solid rgba(101, 228, 163, 1) 0.5px;
+    background-color: rgba(10, 38, 64, 1);
+    color: rgba(101, 228, 163, 1);
+}
+
+
+@media (max-width:550px) {
+
+  .form{
+        padding-top: 10px;
+    }
+    .sig{
+        display: grid;
+        grid-template-rows: 40% 40%;
+        grid-template-columns: 70%;
+        margin: auto;
+        background-color: rgba(28, 61, 91, 1);
+        justify-content: center;
+        border: solid rgba(101, 228, 163, 1) 0.5px;
+        border-radius: 20px;
+        
+    }
+    img{
+        height: 375px;
+        width: 295px;
+        
+    }
+    
+    .roket{
+        width: auto;
+        object-fit: cover;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #signup-form{
+        width: 174px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 32px;
+        border-radius: 10px;
+        margin-top: 50px;
+
+    }
+
+    #login-form{
+        width: 174px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 32px;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+
+    input{
+        width: 200px;
+    }
+
+    button{
+        width: 200px;
+    }
+    
+    
+}
+
+/* CSS for custom popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.close {
+    color: #555;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}

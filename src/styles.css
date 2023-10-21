@@ -1,0 +1,455 @@
+body{
+    height: auto;
+    width: auto;
+    margin: auto;
+    background-color: rgba(10, 38, 64, 1);
+    color: white;
+}
+
+.wrapper { margin: 150px auto; max-width: 960px; }
+            #container{
+                grid-column: 1;
+                grid-row: 2;
+                height:100px;
+                width:100px;
+                margin: auto;
+            }
+            #container .pc-text{
+                color:white;
+                font-family: "Roboto Condensed";
+            }
+            #container .pc-bg{
+                stroke: rgba(10, 38, 64, 1);
+            }
+            #container .pc-fill{
+                stroke:#76f384;
+            }
+            #container1{
+                grid-column: 2;
+                grid-row: 2;
+                height:100px;
+                width:100px;
+                margin: auto;
+            }
+            #container1 .pc-text{
+                color: white;
+                font-family: "Roboto Condensed";
+            }
+            #container1 .pc-bg{
+                stroke:rgba(10, 38, 64, 1);
+            }
+            #container1 .pc-fill{
+                stroke: #76f384;
+            }
+
+
+          #container2{
+            grid-column: 3;
+            grid-row: 2;
+            height:100px;
+            width:100px;
+            margin: auto;
+        }
+        #container2 .pc-text{
+            color: white;
+            font-family: "Roboto Condensed";
+        }
+        #container2 .pc-bg{
+            stroke:rgba(10, 38, 64, 1);
+        }
+        #container2 .pc-fill{
+            stroke: #76f384;
+        }
+
+        #container3{
+          grid-column: 2;
+          grid-row: 3;
+          height:100px;
+          width:100px;
+          margin: auto;
+      }
+      #container3 .pc-text{
+          color: white;
+          font-family: "Roboto Condensed";
+      }
+      #container3 .pc-bg{
+          stroke:rgba(10, 38, 64, 1);
+      }
+      #container3 .pc-fill{
+          stroke: #76f384;
+      }
+
+      #container4{
+        grid-column: 1;
+        grid-row: 2;
+        height:100px;
+        width:100px;
+        margin: auto;
+    }
+    #container4 .pc-text{
+        color: white;
+        font-family: "Roboto Condensed";
+    }
+    #container4 .pc-bg{
+        stroke:rgba(10, 38, 64, 1);
+    }
+    #container4 .pc-fill{
+        stroke: #76f384;
+    }
+
+    #container5{
+      grid-column: 2;
+      grid-row: 2;
+      height:100px;
+      width:100px;
+      margin: auto;
+  }
+  #container5.pc-text{
+      color: white;
+      font-family: "Roboto Condensed";
+  }
+  #container5 .pc-bg{
+      stroke:rgba(10, 38, 64, 1);
+  }
+  #container5 .pc-fill{
+      stroke: #76f384;
+  }
+
+  #container6{
+    grid-column: 3;
+    grid-row: 2;
+    height:100px;
+    width:100px;
+    margin: auto;
+}
+#container6 .pc-text{
+    color: white;
+    font-family: "Roboto Condensed";
+}
+#container6 .pc-bg{
+    stroke:rgba(10, 38, 64, 1);
+}
+#container6 .pc-fill{
+    stroke: #76f384;
+}
+
+#container7{
+  grid-column: 2;
+  grid-row: 3;
+  height:100px;
+  width:100px;
+  margin: auto;
+}
+#container7 .pc-text{
+  color: white;
+  font-family: "Roboto Condensed";
+}
+#container7 .pc-bg{
+  stroke:rgba(10, 38, 64, 1);
+}
+#container7 .pc-fill{
+  stroke: #76f384;
+}
+
+.data-item{
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 25% 37% 37%;
+    grid-template-rows: 40% 11% 65% 50%;
+}
+
+.user{
+    background-color: rgba(28, 61, 91, 1);
+    grid-row: span 5;
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-right: #65E4A3 solid 2px;
+    height: -webkit-fill-available;
+    width: 380px;
+    position: fixed;
+}
+
+.user img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin-top: 100px;
+}
+
+.data{
+    grid-row: 4;
+    grid-column: 2;
+}
+.searchbar{
+    grid-row: 2;
+    grid-column: 2;
+
+}
+
+.displaydata{
+    grid-row: 3;
+    grid-column: 2;
+    background-color: rgba(28, 61, 91, 1);
+    margin: 60px;
+    border-radius: 20px;
+    display: grid;
+grid-template-columns: 33% 33% 33%;
+grid-template-rows: 33% 33% 33%; 
+}
+
+#sign-out-button{
+  background-color: rgb(255, 0, 0);
+  color: white;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#sign-out-button:hover{
+  box-shadow: rgba(248, 72, 41, 0.539) 0px 3px 8px;
+
+}
+
+.data {
+  grid-row: 3;
+  grid-column: 3;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.fliterdata{
+  background-color: rgba(28, 61, 91, 1);
+  border-radius: 20px;
+  width: 350px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disfilterdata{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  height: 336px;
+  width: 400px;
+  background-color: rgba(28, 61, 91, 1);
+  position: absolute;
+  margin-top: 70px;
+  border-radius: 20px;
+}
+
+
+#dateFilterData .data-item{
+ display: flex;
+ grid-row: span 3;
+ 
+}
+
+.data-item h2{
+  display: flex;
+  margin-left: 10px;
+}
+
+.data-item p{
+  display: flex;
+  margin-left: 40px;
+  width: 40px;
+}
+
+#data-list{
+  text-align: center;
+}
+
+#phChart{
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+input{
+  height: 30px;
+  border-radius: 5px;
+  border: #65E4A3 solid 3px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #65E4A3;
+
+}
+
+#filterButton{
+  height: 33px;
+  border: #65E4A3 solid 3px;
+  border-radius: 30px;
+  margin-left: 8px;
+  background-color: #65E4A3;
+  cursor: pointer;
+}
+
+#filterButton:hover{
+  height: 33px;
+  background-color: #65E4A3;
+  box-shadow: rgba(3, 255, 137, 0.463) 0px 3px 8px;
+  
+}
+
+
+.linegraphdata{
+    grid-row: 4;
+    grid-column: 2;
+}
+
+#new-search-form{
+  background-color: rgba(28, 61, 91, 1);
+  border-radius: 20px;
+  width: 550px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  gap: 10px;
+}
+
+#new-search-form button{
+  height: 33px;
+  border: #65E4A3 solid 3px;
+  border-radius: 20px;
+  margin-left: 8px;
+  background-color: #65E4A3;
+}
+
+#new-search-form button:hover{
+  background-color: #65E4A3;
+  box-shadow: rgba(3, 255, 137, 0.463) 0px 3px 8px;
+  cursor: pointer;
+}
+
+
+/* Slideshow container */
+.carousel {
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  grid-column: 2;
+  margin: auto;
+  margin-left: 70px;
+  
+}
+
+.carousel img{
+  border-radius: 10px;
+  border: #65E4A3 solid 3px;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+#search-input{
+  width: 300px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 70px;
+  border-radius: 35px;
+  font-size: 20px;
+  border: #65E4A3 solid 3px;
+  background-color: rgba(10, 38, 64, 1);
+  cursor: text;
+}
+
+#search-input:hover{
+  box-shadow: rgba(3, 255, 137, 0.463) 0px 3px 8px;
+}
+
+
+#search-form{
+  display: flex;
+}
+
+#search-form input{
+  text-align: start;
+  text-indent: 10px;
+  color: white;
+}
+
+.searchbar button{
+  width: 55px;
+  height: 50px;
+  border-radius: 100%;
+  border: #65E4A3 solid 3px;
+  margin-left: 10px;
+  background-color: #65E4A3;
+}
+
+.searchbar button:hover{
+ background-color: #65E4A3;
+ box-shadow: rgba(3, 255, 137, 0.463) 0px 3px 8px;
+ cursor: pointer;
+}
+
+
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+

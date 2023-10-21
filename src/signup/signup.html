@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-database-compat.js"></script>
+    <link rel="stylesheet" href="/src/login/style.css">
+</head>
+<body>
+    <div class="sig">
+        <div class="roket">
+            <img src="/public/signup.png" alt="">
+        </div>
+        <div class="form">
+            <div id="signup-form">
+                <h2>Sign Up</h2>
+                <input type="email" id="signup-email" placeholder="Email">
+                <input type="password" id="signup-password" placeholder="Password">
+                <button onclick="signup()">Sign Up</button>
+
+                <a href="/src/login.html" style="color: white; text-align: center;">you have already account?</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="/src/signup.js"></script>
+</body>
+</html>

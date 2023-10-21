@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> 
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="/src/svg-percent-chart/percent-chart.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> 
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script> 
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.2/luxon.min.js"></script> 
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script> 
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-database-compat.js"></script>
+ <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/src/svg-percent-chart/percent-chart.css">
+  <link rel="stylesheet" href="/src/styles.css">
+
+  <script> 
+    $(function () { 
+        var subjects = [ 
+            "Ganges River",
+            "Yamuna",
+            "Brahmaputra",
+            "Godavari",
+            "Krishna",
+            "Narmada",
+            "Tapi (Tapti)",
+            "Mahanadi",
+            "Kaveri (Cauvery)",
+            "Sabarmati",
+            "Chambal",
+            "Sutlej",
+            "Beas",
+            "Ravi",
+            "Chenab",
+            "Luni",
+            "Ghaggar-Hakra (seasonal)",
+            "Periyar",
+            "Tungabhadra",
+            "Bhavani",
+            "Betwa",
+            "Gandak",
+            "Kosi",
+            "Damodar",
+            "Son",
+            "Subarnarekha",
+            "Brahmani",
+            "Penneru (Pennar)",
+            "Musi",
+            "Sarayu (Ghaghara)",
+            "Sharda",
+            "Sarda",
+            "Ghaghara",
+            "Alaknanda",
+            "Mandakini",
+            "Pamba",
+            "Baitarani",
+            "Mahi",
+            "Netravati",
+            "Tungabhadra" 
+        ]; 
+        $("#search-input").autocomplete({ 
+            source: subjects 
+        }); 
+    }); 
+</script> 
+  <title>Water Quality Monitoring</title>
+</head>
+<body>
+  <!-- Text Input for searching  -->
+  <div class="dashboard">
+    <div class="user">
+        <div id="user-info">
+          <h2 style="text-align: center; margin-top: 80px;">Welcome!</h2>
+          <p>Email: <span id="user-email"></span></p>
+        </div>
+  
+      <!-- Sign Out Button -->
+      <button id="sign-out-button">Sign Out</button>
+
+    </div>
+    <div class="carousel">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="/public/gandak.jpg" style="width: 1000px; height: 180px; object-fit: cover;">
+            <div class="text">Gandak</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="/public/ganga.jpg" style="width:1000px; height: 180px; object-fit: cover;">
+            <div class="text">Gangesh</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="/public/krishna.jpg" style="width:1000px;height: 180px; object-fit: cover;">
+            <div class="text">Krishna</div>
+          </div>
+          <div style="text-align:center" >
+            <span class="dot" style="display: none;"></span> 
+            <span class="dot" style="display: none;"></span> 
+            <span class="dot" style="display: none;"></span> 
+          </div>
+    </div>
+    
+    <div class="searchbar">
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search by location">
+            <button type="submit"><img src="/public/magnifying-glass.png" alt=""></button>
+            <!-- <button id="clearButton">Clear</button> -->
+        </form>
+    </div>
+    <div class="displaydata">
+        <div id="data-list"></div><!-- Data fetched based on location will be displayed here -->
+        <div id="container4"></div>
+        <div id="container5"></div>
+        <div id="container6"></div>
+        <div id="container7"></div>
+    </div>
+    <div class="data">
+        <div class="fliterdata">
+            <div id="dateFilter">
+                <label for="dateSelector">Select Date: </label>
+                <input type="date" id="dateSelector">
+                <button id="filterButton"><b>Filter by Date</b></button>
+              </div>
+        </div>
+        <div class="disfilterdata">
+            <div id="dateFilterData"></div><!-- Water quality data will be displayed here -->
+            <div id="container"></div>
+            <div id="container1"></div>
+            <div id="container2"></div>
+            <div id="container3"></div>
+        </div>
+    </div>
+    
+    <div class="linegraphdata">
+        <div id="new-search-form">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date">
+            <button id="fetch-ph-button"><b>Fetch pH Data</b></button>
+        </div>
+        <div>
+            <canvas id="phChart" width="200" height="100" style="box-sizing: border-box; display: block; height: 200px; width: 400px;"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+  <script src="token.js"></script>
+  <script src="search.js"></script>
+  <script src="chart.js"></script>
+  <script src="user.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.2/luxon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+</body>
+</html>
