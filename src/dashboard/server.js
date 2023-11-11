@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-const mongoURI = 'mongodb+srv://admin:admin9021271962@waterquality.qrxf2tr.mongodb.net/water_quality_db?retryWrites=true&w=majority';
+const mongoURI = Enter Your MongoDB URL Here;
 const dbName = 'water_quality_db';
 const collectionName = 'water_quality_data';
 
