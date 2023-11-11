@@ -1,8 +1,8 @@
 // Initialize Firebase with your own Firebase project config
 const firebaseConfig = {
-    apiKey: "AIzaSyDUWDlrcDGwkGgp_6us11rsDBrfIHYma1g",
-    authDomain: "water-quality-monitoring-cf684.firebaseapp.com",
-    projectId: "water-quality-monitoring-cf684",
+    apiKey: Enter Your APIKEY,
+    authDomain: Enter Your AuthDomain,
+    projectId: Enter Your ProjectID,
 };
 
 firebase.initializeApp(firebaseConfig);
